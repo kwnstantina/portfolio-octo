@@ -1,0 +1,40 @@
+// Utility SCSS file
+
+// Font Sizes
+$font-size-text: 16px;
+$font-size-header: 24px;
+$font-size-small: 2rem;
+$font-size-medium: 3rem;
+$font-size-large: 5rem;
+$font-size-xlarge: 6.6rem;
+
+// FONT WEIGHTS
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Colors
+$primary-color: #6749d1;
+$secondary-color:#af528a;
+$neutral-light: #ecf0f1;
+$neutral: #d1c8d8;
+$neutral-dark: #222;
+$text-color: #221f1f;
+$linear-gradient:  linear-gradient(to right ,  rgba(  34, 34, 34,0.8), rgba(  34, 34, 34,0.9));
+$background-color: #6749d1;
+// Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+$spacing-xlarge: 32px;
+
+// Borders
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 16px;
+
+//Breakpoints
+$breakpoint-small: 600px;
+$breakpoint-med-small: 960px;
+$breakpoint-med: 1175px;
+

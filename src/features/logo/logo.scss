@@ -1,0 +1,17 @@
+@import "../../styles/_utilities.scss";
+
+.logo {
+  margin-top: 5rem;
+  margin-left: 4rem;
+
+    &__link {
+      height: 3rem;
+      width: 3rem;
+      text-decoration: none;
+      color:$neutral-dark;
+      font-size: $font-size-header;
+      font-weight: $font-weight-light;
+    }
+  
+  }
+  

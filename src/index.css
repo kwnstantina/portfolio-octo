@@ -1,0 +1,26 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(./assets/fonts/TestSöhneMono-Buch.otf);
+}
+:root {
+  /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+  /* font-family:Helveticanowdisplay,sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-family:myFirstFont;
+}
+
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #F8F8F8;
+ 
+}

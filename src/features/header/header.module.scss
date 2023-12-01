@@ -1,0 +1,71 @@
+@import '../../styles/_utilities.scss';
+.container {
+  z-index: 999;
+
+  .background {
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    height: 4.5rem;
+
+    &.sm {
+      height: 3.25rem;
+      width: 30rem;
+      border-radius: 1.625rem;
+      background: $primary-color; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom right, #78ffd6, #007991); /* Chrome 10-25, Safari 5.1-6 */
+      background: $linear-gradient; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      border: 1px solid $neutral-light;
+    }
+  }
+
+  .navs {
+    position: relative;
+    bottom: 30%;
+
+    .uls {
+      display: flex;
+      width: 22rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1px;
+      font-size: 0.9rem;
+
+      &.sm {
+        width: initial;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+      }
+
+      .lis {
+        height: 75%;
+        display: flex;
+        justify-content: center;
+
+        a {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          text-decoration: none;
+          padding: 1rem;
+          color: $neutral-light;
+          transition: color 0.3s;
+          font-size:  $font-size-text;
+
+          &:hover {
+            color:$primary-color;
+          }
+
+          &.active {
+            color: $primary-color;
+            font-weight: $font-weight-bold;
+
+            span {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
