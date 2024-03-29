@@ -6,19 +6,19 @@ import LayerAnimButton from "../layerAnimButton/layerAnimButton";
 const AnimatedWordList = () => {
     const [word, setWord] = useState<string>('')
     const words = [
-        'LIFE',
+        'SPORTS',
         'WORLD',
         'CODING',
         'LEARNING',
         'ART',
         'MUSIC',
-        'DESIGN',
         'MOVIES',
         'TRAVEL',
         'FOOD',
         'AMIME',
+        '404',
     ]
-    const finalWord = '404'
+    const finalWord = 'DESIGN'
 
     useEffect(() => {
         let index = 0
@@ -30,7 +30,7 @@ const AnimatedWordList = () => {
         setTimeout(() => {
             clearInterval(interval)
             setWord(finalWord)
-        }, 6300)
+        }, 6500)
 
         return () => clearInterval(interval)
     }, [])
@@ -47,6 +47,8 @@ const AnimatedWordList = () => {
                     scale: [0.5, 1],
                 }}
                 transition={{ duration: 0.5 }}
+               
+                onAnimationComplete={() => setWord(finalWord)}
             >
                 <motion.div className={styles["introduction__wrapper"]}>
                     <motion.div>
@@ -55,8 +57,13 @@ const AnimatedWordList = () => {
                         </motion.p>
                     </motion.div>
                     <motion.div className={styles["introduction__description"]}>
-                        <motion.p className={styles["introduction__word-1"]}>
-                            A Software Developer who loves{' '}
+                    <motion.p className={styles["introduction__word-1"]}>
+                            A Software Developer with love{' '}
+                   </motion.p>
+                   </motion.div>
+                    <motion.div className={styles["introduction__description"]}>
+                       <motion.p className={styles["introduction__word-6"]}>
+                         for
                         </motion.p>
                         <motion.p
                             className={styles["introduction__word-5"]}
@@ -64,10 +71,10 @@ const AnimatedWordList = () => {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
-                        >
+                        >    
                             {word}
                         </motion.p>
-                    </motion.div>
+                     </motion.div>
                 </motion.div>
             </motion.div>
             <div className={styles['button']}>
