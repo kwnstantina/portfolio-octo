@@ -1,0 +1,15 @@
+@import "../../styles/_utilities.scss";
+
+.wrapper {
+  padding: 20px;
+  margin-top: 4rem;
+
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+    margin-left: 2rem;
+  }
+  a:hover {
+    color: rgb(168, 83, 171);
+  }
+}

@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../logo/logo'
 import './navBar.scss'
 import {FaGithubAlt, FaLinkedin, FaMailBulk} from 'react-icons/fa'
@@ -11,13 +10,13 @@ const NavBar = () => {
             </div>
 
             <div className="navBar__right">
-                <a href="#" >
+                <a href="https://github.com/kwnstantina"  target='_blank'>
                     <FaGithubAlt   fontSize={30}/>
                 </a>
-                <a href="#">
+                <a href="https://linkedin.com/in/konstantina-kirtsia" target='_blank'>
                     <FaLinkedin fontSize={30}/>
                 </a>
-                <a href="#">
+                <a href="mailto:konstantinakirtsia@gmail.com">
                     <FaMailBulk fontSize={30}/>
                 </a>
             </div>

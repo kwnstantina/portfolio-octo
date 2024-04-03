@@ -57,9 +57,9 @@
           }
 
           &.active {
-            color: $primary-color;
+            color: $background-color-light;
             font-weight: $font-weight-bold;
-
+            
             span {
               color: $primary-color;
             }
