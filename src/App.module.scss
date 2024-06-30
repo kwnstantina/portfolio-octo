@@ -5,10 +5,12 @@
     flex-direction: row;
     min-height: 100vh;
     width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-content: center;
     justify-items: center;
- 
+    gap:100px;
+    z-index: 1;
+
 
     &__img{
         img{
@@ -17,6 +19,9 @@
         object-fit: contain;
         transition: .5s ease;
         backface-visibility: hidden;
-        }   
+     //   width: 70%;
+        height: 100%;
+
+        }
     }
 }
