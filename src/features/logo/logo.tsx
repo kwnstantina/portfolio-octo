@@ -1,10 +1,9 @@
-import React from 'react';
 import './logo.scss';
 
 const Logo = () => {
   return (
     <div className='logo'>
-     <a href="/" className='logo__link' alt='Konstantina Kirtsia'>
+     <a href="/" className='logo__link' >
        K⚈
       </a>
     </div>
