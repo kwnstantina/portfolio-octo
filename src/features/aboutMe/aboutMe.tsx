@@ -9,14 +9,15 @@ import {
   TimelineTitle,
   TimelineBody,
 } from '../timeline/timeline'
-import { BsEmojiHeartEyes } from 'react-icons/bs'
+import { FaGithubAlt } from 'react-icons/fa6';
 
-const AboutMe = () => {
+
+const AboutMe = ():JSX.Element => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 6.5 },
+      transition: { duration: 3.5 },
     },
   }
 
@@ -76,54 +77,109 @@ const AboutMe = () => {
         </ul>
         I'm working as Software Engineer the last five years.
       </motion.div>
-      <motion.div>
+      <motion.div
+        className={styles.aboutMeContainer}
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         <p className={styles['title']}>Projects</p>
-
         <Timeline>
           <TimelineItem>
             <TimelinePoint />
             <TimelineContent>
-              <TimelineTime>February 2023</TimelineTime>
+              <TimelineTime>January 2023</TimelineTime>
               <TimelineTitle>Website with Maths excersices</TimelineTitle>
               <TimelineBody>
                 An app with maths exercises, tutorials, maths ebook and real
                 chatting.
                 <h3> Technologies:</h3>
                 <b>
-                  Remix, Supabase, MongoDb, Prisma ORM, i18next,Tailwind,
-                  Vercel,Typescript
+                  Remix, Supabase, MongoDb, Prisma ORM, i18next,Tailwind,Vercel,Typescript
                 </b>
               </TimelineBody>
-              <button
-                style={{
-                  backgroundColor: 'transparent',
-                  border: 'none',
-                  color: 'orange',
-                  textDecoration: 'underline',
-                  cursor: 'pointer',
-                }}
-              >
-                App
-              </button>
+              <div className={styles['link-container']}>
+                <button
+                 className={styles['link-container__button']}
+                 onClick={() => window.open('https://gregkyrmaths.vercel.app/')}
+                >
+                  App
+                </button>
+                <a
+                  href="https://github.com/kwnstantina/maths-joy"
+                  target="_blank"
+                >
+                  <FaGithubAlt />
+                </a>
+              </div>
             </TimelineContent>
           </TimelineItem>
           <TimelineItem>
             <TimelinePoint> </TimelinePoint>
             <TimelineContent>
-              <TimelineTime>February 2022</TimelineTime>
-              <TimelineTitle>Application UI code in Tailwind CSS</TimelineTitle>
+              <TimelineTime>April 2024</TimelineTime>
+              <TimelineTitle>Rock|end</TimelineTitle>
               <TimelineBody>
-                Get access to over 20+ pages including a dashboard layout,
-                charts, kanban board, calendar, and pre-order E-commerce &
-                Marketing pages.
+                A Website for daily heroes, where they can share their stories, insights and experiences.
+                <p>
+                  The main goal is to inspire and motivate people to keep going and never give up.
+                  Podcasts, articles, newsletter and a community forum are included.
+                </p>              
+                <h3> Technologies:</h3>
+                <b>
+                  Next.js,Turso, Drizzle ORM, Tailwind, Netlify,Typescript, Jotai State Management
+                </b>
               </TimelineBody>
-              <button className="custom-button">
-                Learn More
-                {/* <HiArrowNarrowRight className="ml-2 h-3 w-3" /> */}
-              </button>
+              <div className={styles['link-container']}>
+                <button
+                 className={styles['link-container__button']}
+                 onClick={() => window.open('https://rockend.netlify.app')}
+                >
+                  App
+                </button>
+                <a
+                  href="https://github.com/kwnstantina/Ro-kend"
+                  target="_blank"
+                >
+                  <FaGithubAlt />
+                </a>
+              </div>
             </TimelineContent>
           </TimelineItem>
-          {/* Repeat for other TimelineItems */}
+
+          <TimelineItem>
+            <TimelinePoint> </TimelinePoint>
+            <TimelineContent>
+              <TimelineTime>April 2024</TimelineTime>
+              <TimelineTitle>Rock|end</TimelineTitle>
+              <TimelineBody>
+                A Website for daily heroes, where they can share their stories, insights and experiences.
+                <p>
+                  The main goal is to inspire and motivate people to keep going and never give up.
+                  Podcasts, articles, newsletter and a community forum are included.
+                </p>              
+                <h3> Technologies:</h3>
+                <b>
+                  Next.js,Turso, Drizzle ORM, Tailwind, Netlify,Typescript, Jotai State Management
+                </b>
+              </TimelineBody>
+              <div className={styles['link-container']}>
+                <button
+                 className={styles['link-container__button']}
+                 onClick={() => window.open('https://rockend.netlify.app')}
+                >
+                  App
+                </button>
+                <a
+                  href="https://github.com/kwnstantina/Ro-kend"
+                  target="_blank"
+                >
+                  <FaGithubAlt />
+                </a>
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+         
         </Timeline>
       </motion.div>
     </>
