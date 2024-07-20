@@ -35,9 +35,14 @@
   border-radius: 8px;
 }
 
+.skill-word-container {
+  width: 100%;
+}
 .skills-word {
-  font-size: $font-size-large;
+  font-size: $font-size-medium;
   color: $neutral;
+  display: inline-block;
+  
 }
 
 .paint-splatter {

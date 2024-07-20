@@ -1,6 +1,7 @@
 import styles from "./skills.module.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { levelToYears } from "../../lib/data/data";
 
 type SkillsProps = {
   skills: any;
@@ -70,7 +71,9 @@ const SkillDetails = ({ skill }: { skill: Skill }) => (
       className={styles["skill-level"]}
       style={{ width: `${skill.level}%` } as any}
     ></motion.div>
-    <motion.div className={styles["skills-word"]}>{skill.level}%</motion.div>
+    <motion.div className={styles["skill-word-container"]}>
+      <p  className={styles["skills-word"]}>   {levelToYears(skill.level)}</p>
+   </motion.div>
   </motion.div>
 );
 

@@ -1,0 +1,45 @@
+@import "../../styles/_utilities.scss";
+
+  
+  .aboutMeContainer {
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+
+    p {
+        text-indent: 1em; 
+        line-height: 1.6; 
+        margin-bottom: 1em;
+        font-size: $font-size-text; 
+        font-weight: $font-weight-bold;
+        text-align: justify;
+    }
+    ul {
+        
+        margin-bottom: 1em;
+        font-size: $font-size-text; 
+        font-weight: $font-weight-bold;
+    }
+   
+  }
+
+  .big-first-letter::first-letter {
+    font-size:  $font-size-small;
+    font-weight: $font-weight-bold;
+    color:$secondary-color;
+    margin-right: 0.1em; 
+    line-height: 1;
+  }
+
+  .specialColor {
+    color:$secondary-color;
+  }
+
+
+  .title{  
+    text-indent: 3rem; 
+    margin-bottom: 1em;
+    font-size: $font-size-medium; 
+    font-weight: $font-weight-bold;
+    text-align: justify;
+  }

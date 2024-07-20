@@ -1,12 +1,13 @@
 @import '../../styles/_utilities.scss';
 .container {
-  z-index: 999;
 
   .background {
     position: fixed;
     bottom: 4rem;
     left: 50%;
     height: 4.5rem;
+    z-index: 999;
+
 
     &.sm {
       height: 3.25rem;
@@ -22,6 +23,8 @@
   .navs {
     position: relative;
     bottom: 30%;
+    z-index: 999;
+
 
     .uls {
       display: flex;

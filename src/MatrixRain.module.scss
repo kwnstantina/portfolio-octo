@@ -1,0 +1,41 @@
+@import './styles/_utilities.scss';
+
+.matrix-rain {
+    display: flex;
+    justify-content: space-around;
+    height: 40rem;
+    overflow: hidden;
+    z-index: 1;
+    padding-left: 10rem;  
+    align-items: center;
+}
+
+  
+  .matrix-line {
+    display: flex;
+    flex-direction: column;
+     animation: matrixRain 10s infinite linear;
+  }
+  
+  .matrix-char {
+    color: $color-matrix-1;
+    font-size: $font-size-large;
+    animation: colorChange 2s infinite linear; // Apply the color change animation
+    font-weight: $font-weight-bold;
+
+  }
+  
+  @keyframes matrixRain {
+    0% { 
+        transform: translateY(-40%);
+        opacity: 0.6; 
+    }
+    50%{
+        opacity: 1;
+    }
+    100% { transform: translateY(0%); opacity: 0.4;  }
+  }
+@keyframes colorChange {
+    0%, 100% { color: #0f0; } // Start and end with green
+    50% { color: $color-matrix-1; } // Midway, change to a lighter green
+}

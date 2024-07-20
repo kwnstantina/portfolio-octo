@@ -9,19 +9,5 @@
     justify-content: center;
     justify-items: center;
     gap:100px;
-    z-index: 1;
 
-
-    &__img{
-        img{
-        border-radius: 50%;
-        background-color: $secondary-color;
-        object-fit: contain;
-        transition: .5s ease;
-        backface-visibility: hidden;
-     //   width: 70%;
-        height: 100%;
-
-        }
-    }
 }

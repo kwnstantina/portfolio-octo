@@ -5,6 +5,7 @@ import NavBar from "../features/navBar/navBar";
 import Header from "../features/header/header";
 import SkillsWrapper from "../features/skills/skillsWrapper";
 import CV from "../features/cv/cv";
+import AboutMe from "../features/aboutMe/aboutMe";
 
 const HeaderLayout = () => (
   <>
@@ -31,8 +32,11 @@ export const routers = createBrowserRouter([
       {
         path: "/cv",
         element: <CV />,
+      }, 
+       {
+        path: "/aboutMe",
+        element: <AboutMe />,
       },
-     
     ],
   },
 ]);

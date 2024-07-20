@@ -17,6 +17,7 @@ const AnimatedWordList = () => {
         'FOOD',
         'AMIME',
         '404',
+        'DEVELOPMENT',
     ]
     const finalWord = 'DESIGN'
 

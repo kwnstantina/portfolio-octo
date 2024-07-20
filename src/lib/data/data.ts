@@ -54,3 +54,11 @@ export const categories = [
     ],
   }
 ] as const;
+
+export const levelToYears = (level: number): string => {
+  if (level <= 20) return "< 1 year";
+  if (level <= 40) return "1-2 years";
+  if (level <= 60) return "2-3 years";
+  if (level <= 80) return "3-4 years";
+  return "4+ years";
+};

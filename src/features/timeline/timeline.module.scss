@@ -1,0 +1,65 @@
+@import "../../styles/_utilities.scss";
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-bottom: 3rem;
+
+ 
+
+  &__content{ }
+  &__point{}
+
+  &__item {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #e5e7eb;
+    margin-bottom: 3rem;
+  }
+
+  &__icon-wrapper{
+    height: 0.75rem; 
+    width: 0.75rem;
+    color: $color-matrix-1; 
+    position: relative; 
+  }
+
+  &__icon-base {
+    position: absolute;
+    left: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem; 
+    border-radius: 9999px; 
+    top:0px;
+    background-color: beige;
+  }
+
+  &__date {
+    margin-bottom: 5px;
+    font-style: italic;
+  }
+
+  &__time {
+    margin-bottom: 1rem; 
+    font-size: 1rem; 
+    font-weight: normal;
+    color: #6b7280; 
+  }
+  &__body {
+    margin-bottom: 1rem; 
+    font-size: 1rem; 
+    font-weight: normal; 
+    color: #6b7280; 
+  }
+
+  &__title {
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    color: #111827; 
+  }
+}
+
