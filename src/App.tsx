@@ -1,22 +1,21 @@
-import styles from "./App.module.scss";
-import AnimatedWordList from "./features/animatedWordList/animatedWordList";
-import HoverEffect from "./features/hoverEffect/hoverEffect";
-import MatrixRain from "./matrixRain";
+import styles from './App.module.scss'
+import AnimatedWordList from './features/animatedWordList/animatedWordList'
+import HoverEffect from './features/hoverEffect/hoverEffect'
+import MatrixRain from './features/matrixRain/matrixRain'
 
-const App=()=> {
+const App = () => {
   return (
     <>
-   
-    <div className={styles["wrapper"]}>
-    <HoverEffect>
-      <div>
-        <AnimatedWordList />
+      <div className={styles['wrapper']}>
+        <HoverEffect>
+          <div>
+            <AnimatedWordList />
+          </div>
+        </HoverEffect>
+        <MatrixRain />
       </div>
-      </HoverEffect>
-         <MatrixRain />
-    </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

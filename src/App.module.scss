@@ -9,5 +9,17 @@
     justify-content: center;
     justify-items: center;
     gap:100px;
+  
+  @include respond-to(small) {
+    flex-direction: column;
+    gap: 120px;
+    height: 100vh;
+  }
+
+  @include respond-to(medium) {
+    flex-direction: column;
+    gap: 140px;
+    height: 100vh;
+  }
 
 }

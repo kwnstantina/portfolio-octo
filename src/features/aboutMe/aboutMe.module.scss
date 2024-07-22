@@ -5,6 +5,18 @@
     padding: 20px;
     margin: auto;
     width: 80%;
+    text-align: left;
+    text-wrap: wrap;
+
+    @include respond-to(small) {
+      width: 20%;
+      padding: 0;
+    }
+  
+    @include respond-to(medium) {
+      width: 90%;
+      padding: 0;
+    }
 
     p {
         text-indent: 1em; 
@@ -13,6 +25,7 @@
         font-size: $font-size-text; 
         font-weight: $font-weight-bold;
         text-align: justify;
+        text-wrap: wrap;
     }
     ul {
         

@@ -7,10 +7,31 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     const [activeSection, setActiveSection] = React.useState("Home");
+    const [lastScrollY, setLastScrollY] = React.useState(0);
+    const [hideHeader, setHideHeader] = React.useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down
+                setHideHeader(true);
+            } else {
+                // Scrolling up
+                setHideHeader(false);
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
+
 
     return (
-        <div className={styles['container']}>
-            <motion.div
+        <div className={`${styles.container} ${hideHeader ? styles.hide : styles.show}`}>
+              <motion.div
                 className={clsx(styles.background, {
                     [styles.sm]: activeSection,
                 })}

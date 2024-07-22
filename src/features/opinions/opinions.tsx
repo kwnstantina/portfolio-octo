@@ -12,16 +12,16 @@ type MarkdownFile = {
 const MarkdownList = () => {
   const { loading, error, data } = useQuery(GET_ALL_MARKDOWN_FILES)
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error: {error.message}</p>
+  if (loading) return <p className={styles.loadingMessage}>Loading...</p>;
+  if (error) return <p className={styles.errorMessage}>Error: Oups,my server is down! </p>;
 
   return (
     <div className={styles['opinions']} >
       <h1>Opinions</h1>
-      <ul className={styles["opinions_items"]}>
+      <ul className={styles["opinions__items"]}>
         {data.getAllMarkdownFiles.map((file: MarkdownFile) => (
-          <li key={file.id}>
-            <Link to={`/opinion/${file.fileName}`}>{file.title}</Link>
+          <li key={file.id} className={styles["opinions__item"]}>
+            <Link className={styles["opinions__link"]} to={`/opinion/${file.fileName}`}>{file.title}</Link>
           </li>
         ))}
       </ul>

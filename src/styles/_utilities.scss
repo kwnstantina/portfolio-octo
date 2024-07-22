@@ -39,3 +39,20 @@ $breakpoint-small: 600px;
 $breakpoint-med-small: 960px;
 $breakpoint-med: 1175px;
 
+
+$breakpoints: (
+  small: 400px,
+  medium: 600px,
+  large: 700px,
+);
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+    @else {
+      @warn "Unknown breakpoint: #{$breakpoint}.";
+    }
+  }

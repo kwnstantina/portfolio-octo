@@ -1,15 +1,99 @@
 @import '../../styles/_utilities.scss';
 
+.opinions {
+  padding: 1rem 0 1rem 4rem;
 
+  @include respond-to(small) {
+    padding: 1rem;
+  }
 
-.opinions{
-    padding: 1rem 0 1rem 4rem;
-    &__items{
-      
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
-        flex-wrap: wrap;
+  @include respond-to(medium) {
+    padding: 1rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+
+  &__item {
+    max-width: 80%;
+    border-radius: $border-radius-medium;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px 0 rgba(160, 154, 154, 0.2);
     }
 
+    @include respond-to(small) {
+      font-size: $font-size-small;
+    }
+
+    @include respond-to(medium) {
+      max-width: 100%;
+    }
+  }
+
+  &__link {
+    color: $primary-color;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $secondary-color;
+    }
+
+    @include respond-to(small) {
+      font-size: $font-size-small;
+    }
+
+    @include respond-to(medium) {
+      font-size: $font-size-small;
+    }
+  }
+}
+
+.opinions-list {
+  padding: 1rem 4rem 1rem 4rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-wrap: wrap;
+  text-indent: 10px;
+  width: 90%;
+
+  @include respond-to(small) {
+    padding: 1rem;
+  }
+
+  @include respond-to(medium) {
+    padding: 1rem;
+  }
+  h1 {
+    color: #333; /* Example style for headings */
+  }
+
+  p {
+    color: #666; /* Example style for paragraphs */
+  }
+
+  a {
+    color: #007bff; /* Example style for links */
+  }
+}
+.loadingMessage {
+  padding: 1rem 0 1rem 4rem;
+  color: blue;
+  text-align: center;
+  font-size: 20px;
+}
+
+.errorMessage {
+  padding: 1rem 0 1rem 4rem;
+  color: red;
+  text-align: center;
+  font-size: 20px;
 }

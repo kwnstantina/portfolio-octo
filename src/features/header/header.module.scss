@@ -1,6 +1,6 @@
 @import '../../styles/_utilities.scss';
-.container {
 
+.container {
   .background {
     position: fixed;
     bottom: 4rem;
@@ -8,15 +8,25 @@
     height: 4.5rem;
     z-index: 999;
 
-
     &.sm {
       height: 3.25rem;
       width: 30rem;
       border-radius: 1.625rem;
       background: $primary-color; /* fallback for old browsers */
-      background: -webkit-linear-gradient(to bottom right, #78ffd6, #007991); /* Chrome 10-25, Safari 5.1-6 */
+      background: -webkit-linear-gradient(
+        to bottom right,
+        #78ffd6,
+        #007991
+      ); /* Chrome 10-25, Safari 5.1-6 */
       background: $linear-gradient; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       border: 1px solid $neutral-light;
+      @include respond-to(small) {
+        width: 18rem;
+      }
+
+      @include respond-to(medium) {
+        width: 22rem;
+      }
     }
   }
 
@@ -24,7 +34,6 @@
     position: relative;
     bottom: 30%;
     z-index: 999;
-
 
     .uls {
       display: flex;
@@ -53,16 +62,17 @@
           padding: 1rem;
           color: $neutral-light;
           transition: color 0.3s;
-          font-size:  $font-size-text;
+          font-size: $font-size-text;
+          
 
           &:hover {
-            color:$primary-color;
+            color: $primary-color;
           }
 
           &.active {
             color: $background-color-light;
             font-weight: $font-weight-bold;
-            
+
             span {
               color: $primary-color;
             }
@@ -71,4 +81,14 @@
       }
     }
   }
+}
+
+.hide {
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.show {
+  visibility: initial;
+  transition: transform 0.3s ease-in-out;
 }

@@ -10,6 +10,7 @@
 .introduction {
   width: 100%;
   z-index: 10;
+  
 
 
   &__wrapper {
@@ -19,9 +20,22 @@
     gap: $spacing-xlarge;
     text-align: center ;
     padding-top: 4rem;
+    text-wrap: wrap;
+
+    @include respond-to(small) {
+      text-align: center ;
+      gap: $spacing-xlarge;
+      text-wrap: wrap;
+   
+    }
   
 
+    @include respond-to(medium) {
+      text-align: left ;
+      text-wrap: wrap;
+    }
   }
+
   &__description {
     display: flex;
     flex-direction: row;
