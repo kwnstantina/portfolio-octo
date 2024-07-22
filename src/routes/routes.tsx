@@ -6,6 +6,8 @@ import Header from "../features/header/header";
 import SkillsWrapper from "../features/skills/skillsWrapper";
 import CV from "../features/cv/cv";
 import AboutMe from "../features/aboutMe/aboutMe";
+import Opinion from "../features/opinions/opinion";
+import Opinions from "../features/opinions/opinions";
 
 const HeaderLayout = () => (
   <>
@@ -33,6 +35,15 @@ export const routers = createBrowserRouter([
         path: "/cv",
         element: <CV />,
       }, 
+      {
+        path:"opinions",
+        element:<Opinions/>
+      },
+      {
+        path:"opinion/:fileName",
+        element:<Opinion/>
+      },
+  
        {
         path: "/aboutMe",
         element: <AboutMe />,

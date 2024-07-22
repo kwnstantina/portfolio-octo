@@ -1,0 +1,15 @@
+@import '../../styles/_utilities.scss';
+
+
+
+.opinions{
+    padding: 1rem 0 1rem 4rem;
+    &__items{
+      
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+
+}

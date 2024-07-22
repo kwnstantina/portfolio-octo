@@ -11,6 +11,10 @@ export const links = [
     name: "CV",
     to: "/cv",
   },
+  {
+    name: 'Opinions',
+    to: '/opinions'
+  }
 ] as const;
 
 export const skills = [
