@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence,useScroll } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./accordion.module.scss";
 import Skills from "../skills/skills";
 
