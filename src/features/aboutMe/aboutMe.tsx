@@ -145,41 +145,7 @@ const AboutMe = ():JSX.Element => {
                 </a>
               </div>
             </TimelineContent>
-          </TimelineItem>
-
-          <TimelineItem>
-            <TimelinePoint> </TimelinePoint>
-            <TimelineContent>
-              <TimelineTime>April 2024</TimelineTime>
-              <TimelineTitle>Rock|end</TimelineTitle>
-              <TimelineBody>
-                A Website for daily heroes, where they can share their stories, insights and experiences.
-                <p>
-                  The main goal is to inspire and motivate people to keep going and never give up.
-                  Podcasts, articles, newsletter and a community forum are included.
-                </p>              
-                <h3> Technologies:</h3>
-                <b>
-                  Next.js,Turso, Drizzle ORM, Tailwind, Netlify,Typescript, Jotai State Management
-                </b>
-              </TimelineBody>
-              <div className={styles['link-container']}>
-                <button
-                 className={styles['link-container__button']}
-                 onClick={() => window.open('https://rockend.netlify.app')}
-                >
-                  App
-                </button>
-                <a
-                  href="https://github.com/kwnstantina/Ro-kend"
-                  target="_blank"
-                >
-                  <FaGithubAlt />
-                </a>
-              </div>
-            </TimelineContent>
-          </TimelineItem>
-         
+          </TimelineItem>   
         </Timeline>
       </motion.div>
     </>
