@@ -17,11 +17,12 @@ const MarkdownList = () => {
 
   return (
     <div className={styles['opinions']} >
-      <h1>Opinions</h1>
+      <h1>Thoughts</h1>
       <ul className={styles["opinions__items"]}>
         {data.getAllMarkdownFiles.map((file: MarkdownFile) => (
           <li key={file.id} className={styles["opinions__item"]}>
-            <Link className={styles["opinions__link"]} to={`/opinion/${file.fileName}`}>{file.title}</Link>
+            <Link className={styles["opinions__link"]} to={`/thought/${file.fileName}`}>{file.title}</Link>
+            <hr />
           </li>
         ))}
       </ul>

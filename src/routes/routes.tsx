@@ -36,11 +36,11 @@ export const routers = createBrowserRouter([
         element: <CV />,
       }, 
       {
-        path:"opinions",
+        path:"thoughts",
         element:<Opinions/>
       },
       {
-        path:"opinion/:fileName",
+        path:"thought/:fileName",
         element:<Opinion/>
       },
   

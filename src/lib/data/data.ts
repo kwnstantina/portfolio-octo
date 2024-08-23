@@ -12,8 +12,8 @@ export const links = [
     to: "/cv",
   },
   {
-    name: 'Opinions',
-    to: '/opinions'
+    name: 'Thoughts',
+    to: '/thoughts'
   }
 ] as const;
 
