@@ -38,6 +38,10 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+        // Increase the maximum file size limit to 3MB to accommodate PDF viewer library
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB
+        // Exclude large library files that don't need to be precached
+        globIgnores: ['**/lib/core/webviewer-*.js'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/markdown-api-k80w\.onrender\.com\/graphql/,
@@ -74,6 +78,20 @@ export default defineConfig({
       }
     })
   ],
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase chunk size warning limit to 1000 kB
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Separate vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'pdf-vendor': ['react-pdf', '@react-pdf/renderer'],
+          'apollo-vendor': ['@apollo/client', 'graphql'],
+        },
+      },
+    },
+  },
+
   css: {
     preprocessorOptions: {
       scss: {
