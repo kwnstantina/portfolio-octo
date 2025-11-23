@@ -14,6 +14,10 @@ export const links = [
   {
     name: 'Thoughts',
     to: '/thoughts'
+  },
+    {
+    name: 'Text!me',
+    to: '/contact'
   }
 ] as const;
 

@@ -1,6 +1,7 @@
 import Logo from '../logo/logo'
 import './navBar.scss'
 import {FaGithubAlt, FaLinkedin, FaMailBulk} from 'react-icons/fa'
+import ThemeToggle from '../../components/ThemeToggle'
 
 const NavBar = () => {
     return (
@@ -10,6 +11,7 @@ const NavBar = () => {
             </div>
 
             <div className="navBar__right">
+                <ThemeToggle />
                 <a href="https://github.com/kwnstantina"  target='_blank'>
                     <FaGithubAlt   fontSize={30}/>
                 </a>

@@ -2,7 +2,23 @@
   font-family: myFont;
   src: url(./assets/fonts/TestSöhneMono-Buch.otf);
 }
+
+/* Light Theme Variables (Default) */
 :root {
+  /* Colors */
+  --bg-color: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --border-color: #333333;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --focus-color: #0066ff;
+  --link-color: #0066ff;
+  --link-hover: #0052cc;
+  --grid-color: #80808012;
+  --accent-color: #0066ff;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
 
   line-height: 1.5;
   font-weight: 400;
@@ -12,9 +28,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  font-family:myFont;
+  font-family: myFont;
 }
 
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --bg-color: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --text-color: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border-color: #e0e0e0;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --focus-color: #4d9fff;
+  --link-color: #4d9fff;
+  --link-hover: #66aaff;
+  --grid-color: #ffffff12;
+  --accent-color: #4d9fff;
+  --card-bg: #1a1a1a;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
 
 body {
   margin: 0;
@@ -24,7 +56,10 @@ body {
   inset: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+  background-color: var(--bg-color);
+  background-image: linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 24px 24px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

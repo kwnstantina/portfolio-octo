@@ -8,6 +8,7 @@ import CV from "../features/cv/cv";
 import AboutMe from "../features/aboutMe/aboutMe";
 import Opinion from "../features/opinions/opinion";
 import Opinions from "../features/opinions/opinions";
+import ContactForm from "../components/ContactForm";
 
 const HeaderLayout = () => (
   <>
@@ -34,7 +35,7 @@ export const routers = createBrowserRouter([
       {
         path: "/cv",
         element: <CV />,
-      }, 
+      },
       {
         path:"thoughts",
         element:<Opinions/>
@@ -43,10 +44,14 @@ export const routers = createBrowserRouter([
         path:"thought/:fileName",
         element:<Opinion/>
       },
-  
+
        {
         path: "/aboutMe",
         element: <AboutMe />,
+      },
+      {
+        path: "/contact",
+        element: <ContactForm />,
       },
     ],
   },

@@ -10,6 +10,7 @@ import {
   TimelineBody,
 } from '../timeline/timeline'
 import { FaGithubAlt } from 'react-icons/fa6';
+import SEO from '../../components/SEO';
 
 
 const AboutMe = ():JSX.Element => {
@@ -23,6 +24,12 @@ const AboutMe = ():JSX.Element => {
 
   return (
     <>
+      <SEO
+        title="About Me - Konstantina Kirtsia"
+        description="Learn more about Konstantina Kirtsia - Full Stack Developer, former fencing athlete, dog lover, and technology enthusiast. Explore my journey and personal projects."
+        keywords="About Konstantina Kirtsia, Software Engineer, Personal Biography, Projects, Rock|end, Maths Exercises"
+        url="https://your-domain.com/aboutMe"
+      />
       <motion.div
         className={styles.aboutMeContainer}
         initial="hidden"

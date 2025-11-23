@@ -1,9 +1,9 @@
-@import '../../styles/_utilities.scss';
+@use '../../styles/_utilities.scss' as *;
 
 .text-helper {
   text-align: left;
   margin: 0;
-  color: $text-color;
+  color: var(--text-color);
 
 }
 
